@@ -1,21 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae | Tu Nombre</title>
+  <style>
+    :root {
+      --bg: #eef1f5;
+      --paper: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --side: #111827;
+      --side-text: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      padding: 32px 16px;
+    }
+    .cv {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--paper);
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,.12);
+    }
+    aside {
+      background: var(--side);
+      color: var(--side-text);
+      padding: 36px 28px;
+    }
+    .avatar {
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: grid; place-items: center;
+      font-size: 2.6rem; font-weight: 700;
+      margin: 0 auto 20px;
+    }
+    aside h1 { font-size: 1.5rem; text-align: center; color: #fff; }
+    aside .role { text-align: center; color: #93c5fd; margin-bottom: 28px; font-size: .95rem; }
+    aside h2 {
+      font-size: .8rem; letter-spacing: .15em; text-transform: uppercase;
+      color: #93c5fd; margin: 24px 0 10px;
+      border-bottom: 1px solid #374151; padding-bottom: 6px;
+    }
+    aside ul { list-style: none; font-size: .92rem; }
+    aside li { margin-bottom: 8px; word-break: break-word; }
+    aside a { color: inherit; text-decoration: none; }
+    aside a:hover { color: #fff; text-decoration: underline; }
+    .skills li { display: flex; flex-direction: column; gap: 4px; }
+    .bar { height: 6px; background: #374151; border-radius: 3px; overflow: hidden; }
+    .bar span { display: block; height: 100%; background: var(--accent); }
+    main { padding: 40px 44px; }
+    section { margin-bottom: 32px; }
+    main h2 {
+      font-size: 1.1rem; text-transform: uppercase; letter-spacing: .12em;
+      color: var(--accent); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    main h2::after { content: ""; flex: 1; height: 1px; background: #e5e7eb; }
+    .item { margin-bottom: 18px; }
+    .item-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .item h3 { font-size: 1.02rem; }
+    .date { color: var(--muted); font-size: .88rem; }
+    .org { color: var(--accent); font-size: .92rem; font-weight: 500; }
+    .item p, .item li { font-size: .95rem; color: #374151; }
+    .item ul { margin: 6px 0 0 18px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tags span {
+      background: #eff6ff; color: var(--accent);
+      padding: 4px 12px; border-radius: 999px; font-size: .85rem; font-weight: 500;
+    }
+    @media (max-width: 720px) {
+      .cv { grid-template-columns: 1fr; }
+      main { padding: 28px 22px; }
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .cv { box-shadow: none; border-radius: 0; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
 </head>
 <body>
-    <p style="color: purple;"><h1>Adios Espacio</h1></p>
-    <p>LOREM IMPUS</p>
-    <p>LOREM IMPUS</p>
-    <p>LOREM IMPUS</p>
-    <p>LOREM IMPUS</p>
-    <p>LOREM IMPUS</p>
-    <p>LOREM IMPUS</p>
-    <p>LOREM IMPUS</p>
-    <p>LOREM IMPUS</p>
-    <p>LOREM IMPUS</p>
-    <p>LOREM IMPUS</p>
+  <div class="cv">
+    <aside>
+      <div class="avatar">TN</div>
+      <h1>Tu Nombre</h1>
+      <p class="role">Desarrollador Web</p>
+
+      <h2>Contacto</h2>
+      <ul>
+        <li>📧 <a href="mailto:carloslinaresnv@gmail.com">carloslinaresnv@gmail.com</a></li>
+        <li>📱 +52 55 0000 0000</li>
+        <li>📍 Ciudad de México, México</li>
+        <li>🔗 <a href="https://github.com/tu-usuario">github.com/tu-usuario</a></li>
+      </ul>
+
+      <h2>Habilidades</h2>
+      <ul class="skills">
+        <li>HTML5 <div class="bar"><span style="width:90%"></span></div></li>
+        <li>CSS3 <div class="bar"><span style="width:85%"></span></div></li>
+        <li>JavaScript <div class="bar"><span style="width:75%"></span></div></li>
+        <li>Git / GitHub <div class="bar"><span style="width:70%"></span></div></li>
+      </ul>
+
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Español — Nativo</li>
+        <li>Inglés — Intermedio</li>
+      </ul>
+    </aside>
+
+    <main>
+      <section>
+        <h2>Perfil</h2>
+        <p>Desarrollador web apasionado por crear sitios limpios, rápidos y accesibles. Con ganas de aprender, resolver problemas y aportar valor a equipos de trabajo colaborativos.</p>
+      </section>
+
+      <section>
+        <h2>Experiencia</h2>
+        <div class="item">
+          <div class="item-head"><h3>Desarrollador Web Junior</h3><span class="date">2024 — Actualidad</span></div>
+          <div class="org">Nombre de la Empresa</div>
+          <ul>
+            <li>Desarrollo de interfaces responsivas con HTML, CSS y JavaScript.</li>
+            <li>Colaboración con diseñadores para llevar prototipos a producción.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><h3>Prácticas Profesionales</h3><span class="date">2023 — 2024</span></div>
+          <div class="org">Otra Empresa</div>
+          <ul>
+            <li>Mantenimiento y mejora de sitios web existentes.</li>
+            <li>Uso de Git para control de versiones.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Educación</h2>
+        <div class="item">
+          <div class="item-head"><h3>Ingeniería en Sistemas</h3><span class="date">2020 — 2024</span></div>
+          <div class="org">Nombre de la Universidad</div>
+        </div>
+        <div class="item">
+          <div class="item-head"><h3>Bachillerato Tecnológico</h3><span class="date">2017 — 2020</span></div>
+          <div class="org">Nombre de la Preparatoria</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Proyectos</h2>
+        <div class="item">
+          <h3>Mi Curriculum Web</h3>
+          <p>CV en una sola página con HTML y CSS, adaptable a móvil e imprimible.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Herramientas</h2>
+        <div class="tags">
+          <span>VS Code</span><span>Git</span><span>GitHub</span><span>Figma</span><span>Responsive Design</span>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
